@@ -119,13 +119,16 @@ export async function POST(req: Request) {
     fs.mkdirSync(path.dirname(markdownPath), { recursive: true });
   }
 
-  fs.writeFile(markdownPath, chapterContext, (err) => {
-    if (err) {
-      console.error("Error writing Markdown file:", err);
-    } else {
-      console.log(`Markdown file saved at: ${markdownPath}`);
-    }
-  });
+  // fs.writeFile(markdownPath, chapterContext, (err) => {
+  //   if (err) {
+  //     console.error("Error writing Markdown file:", err);
+  //   } else {
+  //     console.log(`Markdown file saved at: ${markdownPath}`);
+  //   }
+  // });
+
+  await fs.promises.writeFile(markdownPath, chapterContext);
+  console.log(`Markdown file saved at: ${markdownPath}`);
 
   const pdfPath = path.join(
     process.cwd(),
