@@ -1,4 +1,5 @@
-# Inkwize- AI Book Generator 📚🤖
+# Inkwize- AI Book Generator 📚🤖 
+[Demo Video](./demo_video.mp4)
 
 This project was our submission for our first hackathon, where we built an AI-powered book generator! It uses gemini API to generate original books based on user input.
 
@@ -58,5 +59,3 @@ Start the server
 ```bash
   npm run dev
 ```
-
-## Demo Video
