@@ -86,13 +86,8 @@ export async function POST(req: Request) {
     let attempts = 0;
 
     while (!success && attempts < maxRetries) {
-      const prompt = `We are writing an eBook called ${title}. Overall, it is about ${topic}. Our reader is: ${target_audience}. Please follow the book description to generate the content: ${book_description}. We are currently writing the ${idx + 1
-<<<<<<< HEAD
-        } section for the chapter: ${chapter} with the subtopic: ${subtopic}. The previous sections covered: ${chapterContext}. Write at least ${num_words} words, with quantitative facts and statistics, in a cohesive paragraph format. Act like ${author} and avoid hallucinations. Differentiate each chapter with proper numbering and heading.`;
-=======
-        } section for the chapter: ${chapter} with brief description ${subtopic}. The previous sections covered: ${chapterContext}. Write at least ${num_words} words, with quantitative facts and statistics, in a cohesive paragraph format. Act like ${author} and avoid hallucinations. Differentiate each chapter with proper numbering and heading.`;
->>>>>>> bf95102aeb53bd04caec27d8dca3efefea56cced
-
+      const prompt = `We are writing an eBook called ${title}. Overall, it is about ${topic}. Our reader is: ${target_audience}. Please follow the book description to generate the content: ${book_description}. We are currently writing the ${idx + 1} section for the chapter: ${chapter} with brief description ${subtopic}. The previous sections covered: ${chapterContext}. Write at least ${num_words} words, with quantitative facts and statistics, in a cohesive paragraph format. Act like ${author} and avoid hallucinations. Differentiate each chapter with proper numbering and heading.`;
+      
       try {
         const response = await model.generateContent([prompt]);
         const text =
