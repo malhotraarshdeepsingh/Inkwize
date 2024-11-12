@@ -81,7 +81,7 @@ export async function POST(req: Request) {
 
   // Loop through chapters and generate detailed content for each
   for (let idx = 0; idx < chaptersArray.length; idx++) {
-    const { chapter, subtopic } = chaptersArray[idx];
+    const { chapter } = chaptersArray[idx];
     let success = false;
     let attempts = 0;
 
