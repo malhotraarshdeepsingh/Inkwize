@@ -17,7 +17,7 @@ This project was our submission for our first hackathon, where we built an AI-po
 ## Acknowledgements
 - Ideation and leadership: Aarav Gupta
 - Frontend Development: Shaina Gera, Harshjyot Kaur and Prince Sharma
-- Api handling and Backend Developmeny: Arshdeep Singh Malhotra
+- Api handling and Backend Developmeny: Arshdeep Singh Malhotra and Prince Sharma
 
 ## Challenges and Lessons Learned
 
